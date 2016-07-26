@@ -306,7 +306,7 @@ header.navigation {
         header.navigation li.more > a {
           margin-right: 1em; } }
       header.navigation li.more > a::after {
-        content: "ΓÇ║";
+        content: "›";
         font-size: 1.2em;
         position: absolute;
         right: 0.5em; }
@@ -671,7 +671,7 @@ article.type-system-geometric {
       border: 8px solid transparent;
       bottom: -1.3em;
       color: white;
-      content: "Γû╝";
+      content: "▼";
       font-size: 1.4em;
       margin-left: -8px;
       text-align: center;
@@ -848,6 +848,114 @@ article.type-system-geometric {
 .modal-open {
   overflow: hidden; }
 
+.flash-alert {
+  background-color: #fff6bf;
+  color: #66624c;
+  display: block;
+  margin-bottom: 0.75em;
+  padding: 0.75em;
+  text-align: center; }
+  .flash-alert a {
+    color: #4d4a39;
+    text-decoration: underline; }
+    .flash-alert a:focus, .flash-alert a:hover {
+      color: #1a1913; }
+
+.flash-error {
+  background-color: #fbe3e4;
+  color: #645b5b;
+  display: block;
+  margin-bottom: 0.75em;
+  padding: 0.75em;
+  text-align: center; }
+  .flash-error a {
+    color: #4b4444;
+    text-decoration: underline; }
+    .flash-error a:focus, .flash-error a:hover {
+      color: #191717; }
+
+.flash-notice {
+  background-color: #e5edf8;
+  color: #5c5f63;
+  display: block;
+  margin-bottom: 0.75em;
+  padding: 0.75em;
+  text-align: center; }
+  .flash-notice a {
+    color: #45474a;
+    text-decoration: underline; }
+    .flash-notice a:focus, .flash-notice a:hover {
+      color: #171819; }
+
+.flash-success {
+  background-color: #e6efc2;
+  color: #5c604e;
+  display: block;
+  margin-bottom: 0.75em;
+  padding: 0.75em;
+  text-align: center; }
+  .flash-success a {
+    color: #45483a;
+    text-decoration: underline; }
+    .flash-success a:focus, .flash-success a:hover {
+      color: #171813; }
+
+.expander {
+  width: 100%; }
+  .expander .expander-trigger {
+    color: #1565c0;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.25em;
+    text-decoration: none;
+    user-select: none; }
+    .expander .expander-trigger::before {
+      content: "\25BC";
+      font-size: 0.7em;
+      margin-right: 0.5em; }
+  .expander .expander-content p {
+    color: #333;
+    line-height: 1.5; }
+  .expander .expander-hidden::before {
+    content: "\25BA";
+    font-size: 0.7em; }
+  .expander .expander-hidden + .expander-content {
+    display: none; }
+
+.scroll-on-page {
+  clear: right;
+  float: right;
+  display: inline-block; }
+  .scroll-on-page a {
+    color: #1565c0;
+    text-decoration: none; }
+  @media screen and (min-width: 900px) {
+    .scroll-on-page aside {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .scroll-on-page aside:last-child {
+        margin-right: 0; } }
+  .scroll-on-page .scroll-on-page-link {
+    display: block;
+    outline: none; }
+  .scroll-on-page article h4 {
+    margin: 0 0 0.5em 0; }
+  .scroll-on-page article p {
+    color: #333;
+    line-height: 1.5; }
+  @media screen and (min-width: 900px) {
+    .scroll-on-page article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .scroll-on-page article:last-child {
+        margin-right: 0; } }
+
 body {
   margin: 0;
   padding: 0; }
@@ -969,6 +1077,15 @@ body {
   color: rgba(237, 140, 43, 0.9); }
   .yellow-light {
     color: rgba(237, 140, 43, 0.4); }
+
+.red {
+  color: #911146; }
+
+.green {
+  color: #88A825; }
+
+.blue {
+  color: #1565c0; }
 
 .feature-image {
   background: url(../images/alaska-mountains.jpg) no-repeat 0 -250px;
