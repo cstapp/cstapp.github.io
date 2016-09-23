@@ -1,0 +1,14 @@
+@import "https://fonts.googleapis.com/css?family=Roboto+Slab";
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+h1, h2, h3, h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 45px; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+
+
+/*# sourceMappingURL=maps/main.css.map */

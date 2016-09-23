@@ -1,0 +1,33 @@
+{
+  "name": "cstapp.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jade": "^1.1.0",
+    "gulp-ruby-sass": "^2.1.0",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-util": "^3.0.7"
+  },
+  "devDependencies": {
+    "gulp-sourcemaps": "^1.6.0",
+    "markdown": "^0.5.0",
+    "write": "^0.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://cstapp@github.com/cstapp/cstapp.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cstapp/cstapp.github.io/issues"
+  },
+  "homepage": "https://github.com/cstapp/cstapp.github.io#readme"
+}
