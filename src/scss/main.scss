@@ -1,13 +1,295 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'base/base';
+
+
 @import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
-@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+// @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600';
 
 h1, h2, h3, h4 {
   font-family: 'Roboto Slab', serif;
   font-weight: bold;
   text-transform: none;
-  font-size: 45px;
+}
+h1 {
+  font-size: 3.25rem; /* 52/16 */
+  position: relative;
+}
+h2, h3 {
+  margin-top: 1.875rem; /* 30/16 */
+  margin-bottom: 20px;
+  font-weight: normal;
+  span {
+    font-size: 1.125rem; /* 18/16 */
+    font-family: 'Open Sans';
+    font-weight: normal;
+    background-color: #ecf0f1;
+    padding: 0.25rem 0.375rem; /* 4/16, 6/16 */
+    position: relative;
+    top: -0.188rem; /* -3/16 */
+    margin-left: 0.188rem; /* 3/16 */
+  }
+}
+h2 {
+  font-size: 2.25rem; /* 36/16 */
+  font-weight: bold;
+  clear: both;
+}
+h3 {
+  font-size: 1.75rem; /* 28/16 */
+}
+
+.logo {
+  background-color: #2ECC71;
+  // @include linear-gradient(to top, #27ae60, #2ECC71);
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  letter-spacing: -0.063rem; /* -1/16 */
+  // position: absolute;
+  // left: 270px;
+  &.large {
+    width: 5.625rem; /* 90/16 */
+    height: 5.625rem; /* 90/16 */
+    border-radius: 2.75rem; /* 44/16 */
+    font-size: 3rem; /* 48/16 */
+    padding: 0.563rem 0.875rem; /* 9/16, 14/16 */
+    margin: 2.5rem 0; /* 40/16 */
+  }
+  &.footer {
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    font-size: 23px;
+    padding: 5px 8px;
+    background-color: transparentize(#fff, 0.6);
+    color: #333;
+  }
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Open Sans', sans-serif;
+  // overflow: hidden;
 }
+
+.lead {
+  position: relative;
+  top: -1.125rem; /* -18/16 */
+  margin: 0;
+  line-height: 1.875rem; /* 30/16 */
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.125rem; /* 18/16 */
+  font-family: 'Open Sans';
+  span {
+    font-weight: normal;
+    background-color: #ecf0f1;
+    padding: 0.25rem 0.375rem; /* 4/16, 6/16 */
+    position: relative;
+    top: -0.188rem; /* -3/16 */
+    margin-left: 0.188rem; /* 3/16 */
+  }
+}
+ul {
+  font-size: 1rem; /* 16/16 */
+  margin: 0;
+  line-height: 1.875rem;
+}
+.skills, .honors {
+  ul {
+    @include span-columns(4);
+    margin-bottom: 1.875rem; /* 30/16 */
+    list-style: disc;
+    list-style-position: inside;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.wrap {
+  @include outer-container;
+}
+
+// Refills
+// Uncomment this for a sticky footer.
+
+.wrapper-for-content-outside-of-footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -2em;
+}
+
+html, body {
+ height: 100%;
+}
+
+.wrapper-for-content-outside-of-footer::after {
+  content: "";
+  display: block;
+}
+
+.footer-2, .wrapper-for-content-outside-of-footer::after {
+  height: 17em;
+
+  @include media($large-screen) {
+    height: 5.5em;
+  }
+}
+
+.footer-2 {
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
+  $footer-background: #333;
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+  background: $footer-background;
+  display: inline-block;
+  padding: $base-spacing;
+  width: 100%;
+
+  .footer-logo {
+    margin-bottom: 1em;
+    margin-right: 1em;
+
+    @include media($large-screen) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-logo img {
+    height: 1.6em;
+  }
+
+  ul {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0;
+
+    @include media($large-screen) {
+      float: left;
+      line-height: 1.8em;
+      margin-bottom: 0;
+      margin-left: 1em;
+    }
+  }
+
+  ul li {
+    list-style: none;
+    padding-right: 1em;
+
+    @include media($large-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-links {
+    @include media($large-screen) {
+      float: right;
+      margin-top: 7px;
+    }
+
+    li {
+      font-size: 1em;
+    }
+
+    i {
+      color: transparentize(#fff, 0.6);
+      margin-right: 7px;
+      font-size: 25px;
+      position: relative;
+      top: 4px;
+    }
+
+    :hover {
+      color: #fff;
+    }
+
+    ul.footer-social {
+      margin: 1em 0 0 0;
+
+      @include media($large-screen) {
+        float: right;
+        margin-top: 0;
+      }
+
+      li {
+        float: left;
+        font-size: 1em;
+        line-height: 0;
+        margin: 0;
+        padding-right: 0.7em;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        height: 1.6em;
+        opacity: 0.7;
+        padding: 1px;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+// Back to top
+#back-to-top {
+    position: fixed;
+    bottom: 120px;
+    right: 40px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    background: transparentize(#333, 0.6);
+    color: #444;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    i {
+      color: #fff;
+    }
+}
+#back-to-top:hover {
+    background: transparentize(#333, 0.3);
+}
+#back-to-top.show {
+    opacity: 1;
+}
+// #content {
+//     height: 2000px;
+// }

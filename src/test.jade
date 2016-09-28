@@ -3,25 +3,122 @@ html(lang="en")
   head
     title Craig Stapp
     link(rel="stylesheet", href="css/main.css")
+    link(rel="shortcut icon" href="favicon.ico")
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css")
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous")
   body
-    h1 Resume Page 
-    h2 User Experience Designer - Hewlett Packard Enterprise
-    ul
-      li Played an integral part in the design development and implementation of a cloud based, mobile enabled sales tool within HPE. Produced initial wireframes, conducted user tests, developed initial prototypes and delivered final code (HTML, CSS, JS) and graphic content. 
-      strong good      
-      li Managed the production of multiple video features, used to demonstrate the capabilities of internal HPE Sales tools. Created and edited audio, video and graphic content. 
-      strong good
-    h2 User Experience Designer - Hewlett Packard
-    ul
-      li Designed, developed, and maintained a responsive, mobile friendly internal Marketing Dashboard. Built initial prototypes, produced HTML and CSS, and implemented final code within a corporate approved content management system (CMS). 
-      strong good
-    h2 Usability/User Experience Designer - EDS
-    ul
-      li Helped in the delivery and maintenance of the EDS Web Standards Web site <strong>tweak</strong>. Used by many within the internal web development community as a go to resource for standards and compliance guidance. Built responsive, W3C compliant, HTML Web and Email templates, conducted user tests and participated in usability research.
-    h2 Web/Multimedia Designer - GTE / Verizon Communications
-    ul
-      li Contributed in the production, implementation and maintenance of the GTE.net and GTE.com corporate Web sites. Developed graphic and HTML content. 
-      strong tweak
-      li Independently produced print and multimedia materials for GTE bi-annual corporate conference. 
-      strong tweak
-      
+    #content 
+    
+  
+    .wrapper-for-content-outside-of-footer
+      .wrap    
+        a(href="#" id="back-to-top" title="Back to top") 
+          i.fa.fa-arrow-up
+        .logo.large 
+          | CS      
+        h1 Craig Stapp 
+        p.lead Lead info goes here Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        h2 Experience
+        h3 User Experience Designer 
+          span 
+            a(href="http://www.hpe.com") Hewlett Packard Enterprise - HPE
+        ul
+          li Played an integral part in the design development and implementation of a cloud based, mobile enabled sales tool within HPE. Produced initial wireframes, conducted user tests, developed initial prototypes and delivered final code (HTML, CSS, JS) and graphic content.      
+          li Managed the production of multiple video features, used to demonstrate the capabilities of internal HPE Sales tools. Created and edited audio, video and graphic content.
+        h3 User Experience Designer 
+          span 
+            a(href="http://www.hp.com") Hewlett Packard - HP
+        ul
+          li Designed, developed, and maintained a responsive, mobile friendly internal Marketing Dashboard. Built initial prototypes, produced HTML and CSS, and implemented final code within a corporate approved content management system (CMS). 
+        h3 Usability/User Experience Designer 
+          span 
+            a(href="https://g.co/kgs/1LrJCO") Electronic Data Services - EDS
+        ul
+          li Contributed to the delivery and maintenance of EDS Web Standards. An internal web site used by many within the development community for Web standards and usability guidance. Built responsive, W3C compliant,  HTML Web and Email templates, conducted user tests and participated in usability research.
+        //- h3 Web/Multimedia Designer 
+        //-   span 
+        //-     a(href="http://fiostrending.verizon.com/") GTE / Verizon Communications
+        //- ul
+        //-   li Contributed in the production, implementation and maintenance of the GTE.net and GTE.com corporate Web sites. Developed graphic and HTML content. 
+        //-   strong tweak
+        //-   li Independently produced print and multimedia materials for GTE bi-annual corporate conference. 
+        h2 Honors
+        .honors
+          ul
+            li 2015 HP President’s Quality Award 
+            li 2015 ITSMA Marketing Excellence Award 
+        h2 Skills  
+        .skills
+          ul
+            li Photoshop
+            li Sketch        
+            li HTML
+            li Grunt
+            li Git     
+            li Foundation
+          ul  
+            li Dreamweaver
+            li After Effects
+            li CSS
+            li Gulp
+            li Javascript
+          ul  
+            li Illustrator
+            li Premiere
+            li jQuery
+            li SVN
+            li Bootstrap
+        h2 Education
+        p Bachelor of Fine Arts 
+           span 
+             a(href="http://www.indiana.edu") Indiana University 
+       
+    //- Footer
+    footer.footer-2(role='contentinfo')
+      .wrap
+        .footer-logo
+          .logo.footer
+            | CS
+        .footer-secondary-links
+          ul
+            li
+              a(href='mailto:craig.stapp@verizon.net') 
+                i.fa.fa-envelope-square 
+                | craig.stapp@verizon.net
+            li
+              a(href='tel:214-499-7111')
+                i.fa.fa-phone-square 
+                |  214-499-7111
+
+          //- ul.footer-social
+          //-   li
+          //-     a(href='javascript:void(0)')
+          //-       img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png', alt='Facebook')
+          //-   li
+          //-     a(href='javascript:void(0)')
+          //-       img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png', alt='Twitter')
+          //-   li
+          //-     a(href='javascript:void(0)')
+          //-       img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png', alt='YouTube')
+  script.
+    if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+    }

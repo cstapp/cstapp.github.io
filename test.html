@@ -3,26 +3,105 @@
   <head>
     <title>Craig Stapp</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Resume Page </h1>
-    <h2>User Experience Designer - Hewlett Packard Enterprise</h2>
-    <ul>
-      <li>Played an integral part in the design development and implementation of a cloud based, mobile enabled sales tool within HPE. Produced initial wireframes, conducted user tests, developed initial prototypes and delivered final code (HTML, CSS, JS) and graphic content. </li><strong>good      </strong>
-      <li>Managed the production of multiple video features, used to demonstrate the capabilities of internal HPE Sales tools. Created and edited audio, video and graphic content. </li><strong>good</strong>
-    </ul>
-    <h2>User Experience Designer - Hewlett Packard</h2>
-    <ul>
-      <li>Designed, developed, and maintained a responsive, mobile friendly internal Marketing Dashboard. Built initial prototypes, produced HTML and CSS, and implemented final code within a corporate approved content management system (CMS). </li><strong>good</strong>
-    </ul>
-    <h2>Usability/User Experience Designer - EDS</h2>
-    <ul>
-      <li>Helped in the delivery and maintenance of the EDS Web Standards Web site <strong>tweak</strong>. Used by many within the internal web development community as a go to resource for standards and compliance guidance. Built responsive, W3C compliant, HTML Web and Email templates, conducted user tests and participated in usability research.</li>
-    </ul>
-    <h2>Web/Multimedia Designer - GTE / Verizon Communications</h2>
-    <ul>
-      <li>Contributed in the production, implementation and maintenance of the GTE.net and GTE.com corporate Web sites. Developed graphic and HTML content. </li><strong>tweak</strong>
-      <li>Independently produced print and multimedia materials for GTE bi-annual corporate conference. </li><strong>tweak</strong>
-    </ul>
+    <div id="content"> </div>
+    <div class="wrapper-for-content-outside-of-footer">
+      <div class="wrap">   <a href="#" id="back-to-top" title="Back to top"> <i class="fa fa-arrow-up"></i></a>
+        <div class="logo large">
+           
+          CS      
+        </div>
+        <h1>Craig Stapp </h1>
+        <p class="lead">Lead info goes here Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <h2>Experience</h2>
+        <h3>User Experience Designer <span> <a href="http://www.hpe.com">Hewlett Packard Enterprise - HPE</a></span></h3>
+        <ul>
+          <li>Played an integral part in the design development and implementation of a cloud based, mobile enabled sales tool within HPE. Produced initial wireframes, conducted user tests, developed initial prototypes and delivered final code (HTML, CSS, JS) and graphic content.      </li>
+          <li>Managed the production of multiple video features, used to demonstrate the capabilities of internal HPE Sales tools. Created and edited audio, video and graphic content.</li>
+        </ul>
+        <h3>User Experience Designer <span> <a href="http://www.hp.com">Hewlett Packard - HP</a></span></h3>
+        <ul>
+          <li>Designed, developed, and maintained a responsive, mobile friendly internal Marketing Dashboard. Built initial prototypes, produced HTML and CSS, and implemented final code within a corporate approved content management system (CMS). </li>
+        </ul>
+        <h3>Usability/User Experience Designer <span> <a href="https://g.co/kgs/1LrJCO">Electronic Data Services - EDS</a></span></h3>
+        <ul>
+          <li>Contributed to the delivery and maintenance of EDS Web Standards. An internal web site used by many within the development community for Web standards and usability guidance. Built responsive, W3C compliant,  HTML Web and Email templates, conducted user tests and participated in usability research.</li>
+        </ul>
+        <h2>Honors</h2>
+        <div class="honors">
+          <ul>
+            <li>2015 HP President’s Quality Award </li>
+            <li>2015 ITSMA Marketing Excellence Award </li>
+          </ul>
+        </div>
+        <h2>Skills  </h2>
+        <div class="skills">
+          <ul>
+            <li>Photoshop</li>
+            <li>Sketch        </li>
+            <li>HTML</li>
+            <li>Grunt</li>
+            <li>Git     </li>
+            <li>Foundation</li>
+          </ul>
+          <ul> 
+            <li>Dreamweaver</li>
+            <li>After Effects</li>
+            <li>CSS</li>
+            <li>Gulp</li>
+            <li>Javascript</li>
+          </ul>
+          <ul> 
+            <li>Illustrator</li>
+            <li>Premiere</li>
+            <li>jQuery</li>
+            <li>SVN</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+        <h2>Education</h2>
+        <p>Bachelor of Fine Arts <span> <a href="http://www.indiana.edu">Indiana University </a></span></p>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-2">
+      <div class="wrap">
+        <div class="footer-logo">
+          <div class="logo footer">CS</div>
+        </div>
+        <div class="footer-secondary-links">
+          <ul>
+            <li><a href="mailto:craig.stapp@verizon.net"> <i class="fa fa-envelope-square"> </i>craig.stapp@verizon.net</a></li>
+            <li><a href="tel:214-499-7111"><i class="fa fa-phone-square"> </i> 214-499-7111</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script>
+    if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+    }
+  </script>
 </html>
