@@ -188,9 +188,10 @@ h1, h2, h3, h4 {
   text-transform: none; }
 
 h1 {
-  font-size: 3.25rem;
-  /* 52/16 */
-  position: relative; }
+  font-size: 3rem;
+  /* 48/16 */
+  margin: 0;
+  padding: 0 0 18px 0; }
 
 h2, h3 {
   margin-top: 1.875rem;
@@ -221,6 +222,13 @@ h3 {
   font-size: 1.75rem;
   /* 28/16 */ }
 
+#top-bar {
+  background-color: #ecf0f1;
+  width: 100%;
+  height: 10px;
+  padding-top: 7px;
+  margin-bottom: 50px; }
+
 .logo {
   background-color: #2ECC71;
   color: #fff;
@@ -229,18 +237,16 @@ h3 {
   letter-spacing: -0.063rem;
   /* -1/16 */ }
   .logo.large {
-    width: 5.625rem;
-    /* 90/16 */
-    height: 5.625rem;
-    /* 90/16 */
-    border-radius: 2.75rem;
-    /* 44/16 */
+    width: 85px;
+    height: 85px;
+    border-radius: 45px;
     font-size: 3rem;
     /* 48/16 */
-    padding: 0.563rem 0.875rem;
-    /* 9/16, 14/16 */
-    margin: 2.5rem 0;
-    /* 40/16 */ }
+    padding: 0.438rem 0.813rem;
+    /* 7/16, 13/16 */
+    position: relative;
+    left: -145px;
+    top: 38px; }
   .logo.footer {
     width: 45px;
     height: 45px;
@@ -248,7 +254,11 @@ h3 {
     font-size: 23px;
     padding: 5px 8px;
     background-color: rgba(255, 255, 255, 0.4);
-    color: #333; }
+    color: #333;
+    letter-spacing: -0.025rem; }
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
+    .logo {
+      margin: 0 auto; } }
 
 body {
   margin: 0;
@@ -256,9 +266,6 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 .lead {
-  position: relative;
-  top: -1.125rem;
-  /* -18/16 */
   margin: 0;
   line-height: 1.875rem;
   /* 30/16 */
@@ -285,6 +292,9 @@ ul {
   margin: 0;
   line-height: 1.875rem; }
 
+.second {
+  padding-top: 23px; }
+
 .skills ul, .honors ul {
   float: left;
   display: block;
@@ -308,6 +318,67 @@ ul {
     content: "";
     display: table; }
 
+@media screen and (min-width: 320px) and (max-width: 1280px) {
+  .wrap {
+    padding: 25px 25px 0 25px; }
+
+  .logo.large {
+    width: 5rem;
+    /* 80/16 */
+    height: 5rem;
+    /* 80/16 */
+    font-size: 2.5rem;
+    /* 40/16 */
+    padding: 0.625rem 0.938rem;
+    /* 10/16, 15/16 */
+    margin: 0 auto;
+    left: 0;
+    top: 5px; }
+
+  h1 {
+    font-size: 2.625rem;
+    /* 42/16 */
+    position: relative; }
+
+  #top-bar {
+    height: 12px;
+    margin-bottom: 105px; }
+
+  h1, h2, .lead {
+    text-align: center; }
+
+  h3 {
+    text-align: center; }
+
+  h3 > span, p span {
+    margin: 12px 0;
+    display: block;
+    text-align: center; }
+
+  .skills ul, .honors ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-bottom: 1.875rem;
+    /* 30/16 */
+    list-style: disc;
+    list-style-position: inside; }
+    .skills ul:last-child, .honors ul:last-child {
+      margin-right: 0; }
+    .skills ul li, .honors ul li {
+      margin-bottom: 5px; }
+
+  .honors ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .honors ul:last-child {
+      margin-right: 0; }
+
+  .center {
+    text-align: center; } }
 .wrapper-for-content-outside-of-footer {
   min-height: 100%;
   height: auto !important;
@@ -326,6 +397,9 @@ html, body {
   @media screen and (min-width: 900px) {
     .footer-2, .wrapper-for-content-outside-of-footer::after {
       height: 5.5em; } }
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
+    .footer-2, .wrapper-for-content-outside-of-footer::after {
+      display: none; } }
 
 .footer-2 {
   background: #333;
@@ -339,6 +413,10 @@ html, body {
       .footer-2 .footer-logo {
         float: left;
         margin-bottom: 0; } }
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
+    .footer-2 {
+      height: 12em;
+      margin-top: 80px; } }
   .footer-2 .footer-logo img {
     height: 1.6em; }
   .footer-2 ul {
@@ -358,6 +436,10 @@ html, body {
       .footer-2 ul li {
         display: inline;
         text-align: left; } }
+    @media screen and (min-width: 320px) and (max-width: 1280px) {
+      .footer-2 ul li {
+        text-align: center;
+        margin-bottom: 8px; } }
   .footer-2 ul li a {
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none; }
@@ -400,7 +482,7 @@ html, body {
 
 #back-to-top {
   position: fixed;
-  bottom: 120px;
+  bottom: 210px;
   right: 40px;
   z-index: 9999;
   width: 32px;
@@ -417,6 +499,9 @@ html, body {
   opacity: 0; }
   #back-to-top i {
     color: #fff; }
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
+    #back-to-top {
+      bottom: 350px; } }
 
 #back-to-top:hover {
   background: rgba(51, 51, 51, 0.7); }

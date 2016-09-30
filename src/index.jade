@@ -1,7 +1,12 @@
 doctype html
 html(lang="en")
   head
-    title Craig Stapp
+    title Craig Stapp's Resume
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, minimal-ui")
+    meta(name="apple-mobile-web-app-title" content="Craig Stapp's Resume")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black")
     link(rel="stylesheet", href="css/main.css")
     link(rel="shortcut icon" href="favicon.ico")
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css")
@@ -9,22 +14,23 @@ html(lang="en")
   body
     #content 
     
-  
+    #top-bar
+      .wrap
+        .logo.large 
+          | CS 
     .wrapper-for-content-outside-of-footer
       .wrap    
         a(href="#" id="back-to-top" title="Back to top") 
-          i.fa.fa-arrow-up
-        .logo.large 
-          | CS      
+          i.fa.fa-arrow-up     
         h1 Craig Stapp 
-        p.lead Lead info goes here Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        h2 Experience
-        h3 User Experience Designer 
+        p.lead A seasoned user experience designer that takes difficult business problems and creates simple, easy to use responsive web experiences through impactful design thinking, user research and rapid prototyping. 
+        h2 Experience 
+        h3 User Experience Designer  
           span 
             a(href="http://www.hpe.com") Hewlett Packard Enterprise - HPE
         ul
           li Played an integral part in the design development and implementation of a cloud based, mobile enabled sales tool within HPE. Produced initial wireframes, conducted user tests, developed initial prototypes and delivered final code (HTML, CSS, JS) and graphic content.      
-          li Managed the production of multiple video features, used to demonstrate the capabilities of internal HPE Sales tools. Created and edited audio, video and graphic content.
+          li.second Managed the production of multiple video features, used to demonstrate the capabilities of internal HPE Sales tools. Created and edited audio, video and graphic content.
         h3 User Experience Designer 
           span 
             a(href="http://www.hp.com") Hewlett Packard - HP
@@ -47,29 +53,33 @@ html(lang="en")
           ul
             li 2015 HP President’s Quality Award 
             li 2015 ITSMA Marketing Excellence Award 
-        h2 Skills  
+        h2 Skills 
         .skills
           ul
             li Photoshop
-            li Sketch        
+            li After Effects
+            li Sketch       
             li HTML
-            li Grunt
-            li Git     
+            li Javascript
             li Foundation
+        .skills  
           ul  
             li Dreamweaver
-            li After Effects
+            li Premiere
             li CSS
             li Gulp
-            li Javascript
+            li Actionscript
+            li Git                 
+        .skills
           ul  
             li Illustrator
-            li Premiere
+            li Flash 
             li jQuery
-            li SVN
+            li Grunt
             li Bootstrap
+            li SVN            
         h2 Education
-        p Bachelor of Fine Arts 
+        p.center Bachelor of Fine Arts 
            span 
              a(href="http://www.indiana.edu") Indiana University 
        
