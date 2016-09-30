@@ -480,6 +480,22 @@ html, body {
       .footer-2 .footer-secondary-links ul.footer-social img:focus, .footer-2 .footer-secondary-links ul.footer-social img:hover {
         opacity: 1; }
 
+.util-links > li > a::before {
+  font-family: 'FontAwesome';
+  font-size: 25px; }
+
+.util-links > li > a.phone::before {
+  content: "\f098";
+  padding-right: 5px;
+  position: relative;
+  top: 4px; }
+
+.util-links > li > a.mail::before {
+  content: "\f199";
+  padding-right: 5px;
+  position: relative;
+  top: 4px; }
+
 #back-to-top {
   position: fixed;
   bottom: 210px;

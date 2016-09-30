@@ -340,6 +340,22 @@ html, body {
   }
 }
 
+.util-links > li > a::before {
+  font-family: 'FontAwesome';
+  font-size: 25px;
+}
+.util-links > li > a.phone::before {
+  content: "\f098";
+  padding-right: 5px;
+  position: relative;
+  top: 4px;
+}
+.util-links > li > a.mail::before {
+  content: "\f199";
+  padding-right: 5px;
+  position: relative;
+  top: 4px;
+}
 
 // Back to top
 #back-to-top {
