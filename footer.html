@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Footer | Caliber Home Loans Style Guide</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body class="undefined">
+    <header>
+      <nav class="chl-sub-brand-header">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="chl-nav-util-icons chl-nav-util-icons--sub-brand pull-left">
+              <ul>
+                <li> <a href="#">
+                    <div class="fa fa-th"> </div><span>Sites                                              </span></a></li>
+              </ul>
+            </div>
+            <div class="chl-nav-util-icons chl-nav-util-icons--sub-brand pull-right">
+              <ul>
+                <li><a href="#">
+                    <div class="fa fa-user-circle"> </div><span>My Caliber</span></a></li>
+                <li> <a href="#">
+                    <div class="fa fa-phone"> </div><span>Contact      </span></a></li>
+                <li> <a href="#">
+                    <div class="fa fa-search"> </div><span>Search   </span></a></li>
+              </ul>
+            </div>
+            <div class="caliber-logo"></div>
+          </div>
+        </div>
+      </nav>
+      <div id="nav-wrapper">       
+        <nav data-spy="affix" data-offset-top="80" class="navbar navbar-inverse main-nav-header">
+          <div class="container-fluid">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false" class="collapsed navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand"> <i class="fa fa-home"> </i>CHL Styles </a>
+              </div>
+              <div id="bs-example-navbar-collapse-9" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="typography.html">Typography          </a></li>
+                  <li><a href="buttons.html">Buttons</a></li>
+                  <li><a href="tables.html">Tables</a></li>
+                  <li><a href="alerts.html">Alerts</a></li>
+                  <li><a href="panels.html">Panels</a></li>
+                  <li><a href="features.html">Features  </a></li>
+                  <li class="active"><a href="footer.html">Footer</a></li>
+                  <li><a href="header.html">Headers</a></li>
+                  <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Dropdown<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li> <a href="#">Link Text              </a></li>
+                      <li><a href="#">Link Text</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h1 class="page-header">Footer</h1>
+    </div>
+    <footer>
+      <nav class="chl-footer">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="caliber-logo"></div>
+            <ul class="chl-footer__main-nav-links">
+              <li> <a href="typography.html">Typography</a></li>
+              <li> <a href="buttons.html">Buttons</a></li>
+              <li><a href="tables.html">Tables                        </a></li>
+              <li> <a href="alerts.html">Alerts</a></li>
+              <li> <a href="panels.html">Panels</a></li>
+              <li> <a href="features.html">Features</a></li>
+              <li> <a href="footer.html">Footer</a></li>
+              <li> <a href="header.html">Headers</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="chl-footer-utils">
+        <div class="container-fluid">
+          <div class="container chl-footer__copyright">
+            <p>&copy; 2017 Caliber Home Loans, Inc. All Rights Reserved. NMLS#15622</p>
+            <ul class="list-inline chl-footer__util-nav-links">
+              <li> <a href="https://caliberhomeloans.com/tools-resources/legal/security">Security</a></li>
+              <li> <a href="https://caliberhomeloans.com/tools-resources/legal/terms-of-use">Terms of Use</a></li>
+              <li> <a href="https://caliberhomeloans.com/tools-resources/legal/privacy-policy">Privacy Policy</a></li>
+              <li> <a href="https://caliberhomeloans.com/tools-resources/legal/terms-of-use#Licensing">Licensing</a></li>
+              <li> <a href="https://caliberhomeloans.com/tools-resources/legal/texas-mortgage-banker-disclosure">Texas Mortgage Banker Disclosure</a></li>
+              <li> <a href="http://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/15622">NMLS Consumer Access</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <script>
+      $(function() {
+          var header = $(".fa-home");
+          $(window).scroll(function() {    
+              var scroll = $(window).scrollTop();
+          
+              if (scroll >= 80) {
+                  header.removeClass('fa-home').addClass("chl-small-logo");
+              } else {
+                  header.removeClass("chl-small-logo").addClass('fa-home');
+              }
+          }),
+      $(function() { // Fixes jumpy Affix Nav
+        $('#nav-wrapper').height($(".navbar").height());
+        });  
+      }); 
+    </script>
+  </body>
+</html>
